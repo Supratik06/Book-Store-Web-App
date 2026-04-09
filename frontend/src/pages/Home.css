@@ -1,0 +1,52 @@
+.Home-Page {
+  width: 100%;
+  min-height: 91.5vh;
+}
+
+.homing {
+  width: 500px;
+  height: auto;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), filter 0.5s ease;
+  animation: float 6s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.homing:hover {
+  transform: scale(1.08) rotate(2deg);
+  filter: drop-shadow(0 20px 30px rgba(255, 255, 255, 0.2));
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.title-text {
+  font-size: 80px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: fadeUp 1s ease-out;
+}
+
+.subtitle-text {
+  font-size: 50px;
+  font-weight: 300;
+  color: white;
+  animation: fadeUp 1.2s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
