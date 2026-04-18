@@ -4,7 +4,7 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node --no-deprecation app.js"
   },
   "keywords": [],
   "author": "",
@@ -12,6 +12,7 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^17.4.1",
     "express": "^5.1.0",
     "mongoose": "^8.17.1",
     "nodemon": "^3.1.10"
