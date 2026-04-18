@@ -6,7 +6,7 @@ const Books = () => {
     const [Data, setData] = useState();
     useEffect(() => {
       const fetch = async()=>{
-        await axios.get("http://localhost:1000/api/v1/getBooks").then((res)=>setData(res.data.books));
+        await axios.get("https://bookstoreapp-6qoq.vercel.app/api/v1/getBooks").then((res)=>setData(res.data.books));
       };
       fetch();
     });
