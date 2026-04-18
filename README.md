@@ -8,4 +8,4 @@ How to Run the Project:
     npm run dev
 3.  Open the application:
     -----------------------
-   Navigate to [http://localhost:----](https://bookstoreapp-beryl.vercel.app/books) in your web browser.
+   Navigate to https://bookstoreapp-beryl.vercel.app/books in your web browser.
