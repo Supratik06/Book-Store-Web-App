@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-//import axios from "axios";
+
 const BooksSection= ({ data }) => {
 return (
 <div className="d-flex justify-content-center align-items-center flex-wrap my-3" style={{ gap: "20px" }}>
