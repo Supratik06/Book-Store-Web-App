@@ -12,7 +12,8 @@ const AddBooks = () => {
   console.log(Data);
   const submit = async (e) => {
     e.preventDefault();
-    await axios.post("https://bookstoreapp-6qoq.vercel.app/api/v1/add", Data).then((res) => alert(res.data.message));
+    const API_URL = process.env.REACT_APP_API_URL || "";
+    await axios.post(`${API_URL}/api/v1/add`, Data).then((res) => alert(res.data.message));
     setData({ bookname: "", auther: "", description: "", price: "", image: "", contact_no: "" });
     navigate('/books');
   };
