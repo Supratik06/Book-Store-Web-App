@@ -14,7 +14,11 @@ const BookDetails = () => {
                 // However, first let's try the backend endpoint.
                 const API_URL = process.env.REACT_APP_API_URL || "";
                 const res = await axios.get(`${API_URL}/api/v1/getBooks/${id}`);
-                setBook(res.data.book);
+                if (res.data && res.data.book) {
+                    setBook(res.data.book);
+                } else {
+                    throw new Error("Invalid API response format");
+                }
             } catch (error) {
                 console.error("Error fetching book", error);
                 
