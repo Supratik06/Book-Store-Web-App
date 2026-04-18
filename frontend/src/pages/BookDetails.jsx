@@ -12,7 +12,8 @@ const BookDetails = () => {
             try {
                 // If it's a mock DB ID (1, 2, 3), we'll do a fallback logic just in case the server still fails to connect to mongo.
                 // However, first let's try the backend endpoint.
-                const res = await axios.get(`https://bookstoreapp-6qoq.vercel.app/api/v1/getBooks/${id}`);
+                const API_URL = process.env.REACT_APP_API_URL || "";
+                const res = await axios.get(`${API_URL}/api/v1/getBooks/${id}`);
                 setBook(res.data.book);
             } catch (error) {
                 console.error("Error fetching book", error);
