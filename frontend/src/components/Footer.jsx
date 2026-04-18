@@ -54,7 +54,8 @@ const Footer = () => {
             <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 text-start">
               <h5 className="text-uppercase mb-4 font-weight-bold" style={{ color: "#00c6ff" }}>Useful Links</h5>
               <p><Link to="/profile" className="footer-link">Your Account</Link></p>
-              <p><a href="/home" className="footer-link">Help & Support</a></p>
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <p><a href="#" className="footer-link">Help & Support</a></p>
             </div>
 
             <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 text-start">
