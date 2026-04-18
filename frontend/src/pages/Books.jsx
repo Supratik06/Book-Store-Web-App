@@ -11,7 +11,11 @@ const Books = () => {
         try {
             const API_URL = process.env.REACT_APP_API_URL || "";
             const res = await axios.get(`${API_URL}/api/v1/getBooks`);
-            setData(res.data.books);
+            if (res.data && res.data.books) {
+                setData(res.data.books);
+            } else {
+                throw new Error("Invalid API response format");
+            }
         } catch (err) {
             console.error("API Error:", err);
             setError(true);
